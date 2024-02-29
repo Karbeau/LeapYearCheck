@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="icon" type="image/x-icon" href="./resources/images/SplitFavicon.png"> -->
+
+    <title>Is it a leap year?</title>
+</head>
+<body>
+    <h1>Is it a leap year?</h1>
+
+    <form onsubmit="event.preventDefault();" action="javascript:void(0)" method="get" id="yearForm">
+        <label for="year">Year:</label>
+        <p>(2 to 4 characters ex. 95 or 1995)</p>
+
+        <input type="number" id="year" name="year" required minlength="2" maxlength="4" size="10" />
+        <input type="submit" value="Check Year" id="checkYearButton"/>
+    </form>
+
+    <section>
+        <h2 id="answer"></h2>
+    </section>
+
+
+    
+    <!-- javascript -->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
