@@ -4,12 +4,12 @@ let answerHeading = document.getElementById("answer")
 
 checkYearForm.addEventListener("submit", () => {
     const inputYearInt = parseInt(document.getElementById("year").value)
-    if (stringToNum()) {answerHeading.innerHTML = inputYearInt + " is a leap year!"}
-    answerHeading.innerHTML = inputYearInt + " is not a leap year!"
+    if (stringToNum()) {answerHeading.innerHTML = inputYearInt + " is a leap year!"
+    } else answerHeading.innerHTML = inputYearInt + " is not a leap year!"
 })
 
 function stringToNum () {
-    const inputYear = document.getElementById("year").value
+    let inputYear = document.getElementById("year").value
 
     // Check length before changing string input to number
     // Trust, it's just easier this way
@@ -20,14 +20,9 @@ function stringToNum () {
     }
 
     // Make it a numba!
-    parseInt(inputYear)
+    let inputYearNum = parseInt(inputYear)
 
-    let result = leapYearCheck(inputYear)
-    if (result){
-        return true
-    } else if (result == false) {
-        return false
-    }
+    return leapYearCheck(inputYearNum)
 }
 
 function leapYearCheck(num) {
